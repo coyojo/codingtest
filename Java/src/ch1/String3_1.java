@@ -7,6 +7,7 @@ public class String3_1 {
 	public String solution(String str) {
 		String answer="";
 		int m =Integer.MIN_VALUE, pos;
+		
 		while((pos=str.indexOf(' '))!=-1) { // 띄어쓰기의 위치를 리턴 --> pos에 담는다
 			String tmp = str.substring(0, pos);
 			int len = tmp.length();
@@ -16,7 +17,7 @@ public class String3_1 {
 			}
 			str = str.substring(pos+1);
 		}
-		
+		if(str.length()>m) answer = str;
 		return answer;
 	}
 
